@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MarkdownPreview from '@uiw/react-markdown-preview';
 import Button from './components/button.jsx';
 
 // API Call
@@ -104,7 +105,7 @@ const App = () => {
           {generatedPost && (
             <div className="mt-5">
               <h2 className="text-xl font-semibold mb-2">Generated Post:</h2>
-              <p className="bg-gray-100 p-3 rounded-lg">{generatedPost}</p>
+              <div className="bg-gray-100 p-3 rounded-lg"><MarkdownPreview className="bg-gray-100" source={generatedPost}/></div>
             </div>
           )}
         </div>
